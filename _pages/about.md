@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: PhD Student, Center for Systems Integration and Sustainability, Department of Fisheries and Wildlife, Michigan State University
 
 profile:
   align: right
