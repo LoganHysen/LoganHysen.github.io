@@ -2,96 +2,62 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: Logan Hysen
+    - name: Email
+      value: hysenlog@msu.edu
+    - name: Affiliation
+      value: Department of Fisheries and Wildlife, Michigan State University
 
 - title: Education
   type: time_table
   contents:
     - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+      institution: Department of Fisheries and Wildlife, Michigan State University
+      year: In progress
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+        - Center for Systems Integration and Sustainability
+        - Advisor: Dr. Jianguo (Jack) Liu
+        - "Dissertation focus: climate change, human processes, and giant panda habitat across scales."
 
-- title: Experience
+- title: Research Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: PhD Researcher
+      institution: Center for Systems Integration and Sustainability, Michigan State University
+      year: Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+        - Studies landscape ecology and conservation questions using spatial and quantitative methods.
+        - Works on habitat selection, connectivity, human-wildlife coexistence, sustainable development, and biodiversity conservation.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
+- title: Research Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Landscape Ecology and Conservation
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Habitat selection
+        - Connectivity
+        - Species distributions
+        - Climate change impacts
+    - title: Coupled Human-Natural Systems
       items:
-        - Description 1.
-        - Description 2.
+        - Human-wildlife coexistence
+        - Sustainable development
+        - Conservation planning across scales
 
-- title: Other Interests
+- title: Technical Skills
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - Spatial analysis and GIS
+    - Quantitative ecology
+    - Reproducible research workflows
+    - Data visualization
+
+- title: Publications and Profiles
+  type: time_table
+  contents:
+    - title: <a href="https://scholar.google.com/citations?user=1rHLFdoAAAAJ&hl">Google Scholar</a>
+      year: Profile
+      description: Current publication and citation record.
+    - title: <a href="https://www.researchgate.net/profile/Logan-Hysen">ResearchGate</a>
+      year: Profile
+      description: Research profile and publication updates.

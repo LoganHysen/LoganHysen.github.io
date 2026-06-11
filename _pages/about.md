@@ -1,11 +1,10 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: >
-  PhD Student
-  Center for Systems Integration and Sustainability
-  Department of Fisheries and Wildlife
+  PhD Student, Department of Fisheries and Wildlife<br>
+  Center for Systems Integration and Sustainability<br>
   Michigan State University
 
 profile:
@@ -15,13 +14,15 @@ profile:
   more_info: >
     <p>115 Manly Miles</p>
     <p>1405 S Harrison Road</p>
-    <p>East Lansing, MI 4884</p>
+    <p>East Lansing, MI 48824</p>
 
-news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+news: false # includes a list of news items
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-I am a second-year PhD student in the Department of Fisheries and Wildlife at Michigan State University. I work with Dr. Jianguo (Jack) Liu in the Center for Systems Integration and Sustainability. For my disertation, I am studying how climate change and human processes across multiple scales combine to impact giant panda habitat. 
+I am a PhD student in the Department of Fisheries and Wildlife at Michigan State University, working with Dr. Jianguo (Jack) Liu in the Center for Systems Integration and Sustainability. My dissertation examines how climate change and human processes across multiple scales combine to shape giant panda habitat.
 
-More broadly, I work on a variety of projects with wide-ranging implications for management and conservation of wildlife. My research interests span multiple taxa, ecosystems, geographical locations, and scales, with a focus on landscape ecology and conservation. I use spatial techniques to answer applied, methodological, and theoretical questions related to habitat selection, connectivity, human-wildlife coexistence, conservation, sustainable development and more.
+More broadly, I study applied questions in landscape ecology and conservation across taxa, ecosystems, geographies, and scales. I use spatial and quantitative approaches to understand habitat selection, connectivity, human-wildlife coexistence, sustainable development, and biodiversity conservation.
+
+This site collects my research outputs, software and reproducible workflows, teaching materials, and CV.
 

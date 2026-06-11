@@ -1,12 +1,22 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+title: Teaching
+description: Teaching, mentoring, and instructional materials.
 nav: true
-nav_order: 6
+nav_order: 5
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+My teaching interests center on helping students use ecological theory, spatial thinking, and reproducible quantitative workflows to address applied conservation problems.
 
-Organize your courses by years, topics, or universities, however you like!
+## Teaching Interests
+
+- Landscape ecology and conservation planning
+- Spatial analysis for wildlife and biodiversity research
+- Habitat selection, connectivity, and movement ecology
+- Reproducible research with R, GIS, and open data
+- Human-wildlife coexistence and coupled human-natural systems
+
+## Mentoring
+
+I am interested in mentoring students who want to build practical skills in spatial ecology, conservation science, and reproducible analysis. This page can be expanded with course appointments, guest lectures, workshops, and teaching materials as they are added.
