@@ -7,7 +7,24 @@ nav: true
 nav_order: 5
 ---
 
-My teaching interests center on helping students use ecological theory, spatial thinking, and reproducible quantitative workflows to address applied conservation problems.
+My teaching interests center on helping students use ecological theory, spatial thinking, and reproducible quantitative workflows to address applied conservation problems. Below is a list of my teaching experiences. 
+
+## Teaching Experience
+
+# Courses
+International Summer School on Geography and Sustainability 2026: Frontiers in Telecoupling and Metacoupling Research for Addressing Global Sustainability Challenges (Instructor)
+
+Ornithology (TA)
+
+Field Methods in Wildlife Biology (TA)
+
+
+# Workshops
+Metacoupling and Telecoupling: Using Interdisciplinary Frameworks to Connect Landscapes Across Scales (Instructor)
+
+## Certificate in College Teaching
+
+I am currently working to meet the proficiencies required to obtain a Certificate in College Teaching from CIRTL and Michigan State University.
 
 ## Teaching Interests
 
@@ -19,4 +36,4 @@ My teaching interests center on helping students use ecological theory, spatial 
 
 ## Mentoring
 
-I am interested in mentoring students who want to build practical skills in spatial ecology, conservation science, and reproducible analysis. This page can be expanded with course appointments, guest lectures, workshops, and teaching materials as they are added.
+I have mentored one undergraduate student on a research project resulting in the student's first first-author publication. 
