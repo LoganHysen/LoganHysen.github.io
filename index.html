@@ -1,0 +1,183 @@
+---
+title: Logan Hysen
+description: Landscape ecology and conservation research by Logan Hysen, a PhD candidate at Michigan State University.
+body_class: home
+map: true
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-grid page-shell">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">Landscape ecologist · Conservation scientist</p>
+      <h1 id="hero-title">Connecting landscapes, wildlife, and people across scales.</h1>
+      <p class="hero-intro">
+        I am a PhD candidate at Michigan State University studying how climate change
+        and human activity shape wildlife habitat—from local landscapes to globally
+        connected systems.
+      </p>
+      <div class="hero-actions" aria-label="Featured links">
+        <a class="button button-primary" href="#research">Explore my research</a>
+        <a class="text-link" href="{{ '/cv/' | relative_url }}">View my CV <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <figure class="portrait-wrap reveal">
+      <div class="portrait-frame">
+        <img src="{{ '/assets/img/Hysen_Headshot.JPG' | relative_url }}" alt="Logan Hysen" width="2471" height="2152" fetchpriority="high">
+      </div>
+      <figcaption>
+        <span>PhD Candidate</span>
+        <span>Michigan State University</span>
+      </figcaption>
+    </figure>
+  </div>
+  <a class="scroll-cue" href="#research" aria-label="Continue to research">
+    <span>Scroll to explore</span>
+    <span class="scroll-line" aria-hidden="true"></span>
+  </a>
+</section>
+
+<section id="research" class="section section-intro">
+  <div class="page-shell intro-grid">
+    <div class="section-label reveal">
+      <p class="eyebrow">Research</p>
+      <span class="section-number" aria-hidden="true">01</span>
+    </div>
+    <div class="statement reveal">
+      <h2>I study how ecological and human processes combine to shape habitat and conservation outcomes.</h2>
+      <p>
+        My dissertation examines how climate change and human processes operating at
+        multiple scales affect giant panda habitat. More broadly, I use spatial and
+        quantitative approaches to ask applied, methodological, and theoretical
+        questions across taxa, ecosystems, and geographies.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section themes-section" aria-labelledby="themes-title">
+  <div class="page-shell">
+    <div class="section-heading reveal">
+      <p class="eyebrow">Research themes</p>
+      <h2 id="themes-title">Questions that travel across boundaries</h2>
+    </div>
+    <div class="theme-grid">
+      <article class="theme-card reveal">
+        <span class="theme-index">01</span>
+        <h3>Habitat and connectivity</h3>
+        <p>Understanding where species live, how they move, and how changing landscapes connect—or isolate—them.</p>
+      </article>
+      <article class="theme-card reveal">
+        <span class="theme-index">02</span>
+        <h3>Human–wildlife coexistence</h3>
+        <p>Examining the relationships between human decisions, livelihoods, development, and wildlife conservation.</p>
+      </article>
+      <article class="theme-card reveal">
+        <span class="theme-index">03</span>
+        <h3>Coupled systems</h3>
+        <p>Tracing ecological and socioeconomic connections across places, scales, and administrative borders.</p>
+      </article>
+      <article class="theme-card reveal">
+        <span class="theme-index">04</span>
+        <h3>Spatial conservation</h3>
+        <p>Using GIS, reproducible workflows, and quantitative models to support effective conservation decisions.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="map" class="section map-section" aria-labelledby="map-title">
+  <div class="page-shell map-heading">
+    <div class="section-label reveal">
+      <p class="eyebrow">Research geography</p>
+      <span class="section-number" aria-hidden="true">02</span>
+    </div>
+    <div class="reveal">
+      <h2 id="map-title">Research connected across places</h2>
+      <p>As this portfolio grows, this map will connect each project to the landscapes, communities, and collaborations that shape it.</p>
+    </div>
+  </div>
+
+  <div class="page-shell map-content reveal">
+    {% if site.data.projects and site.data.projects != empty %}
+      <div id="research-map" class="research-map" role="region" aria-label="Map of research project locations"></div>
+      <div class="project-list" aria-label="Research projects">
+        {% for project in site.data.projects %}
+          <article class="project-item">
+            <p class="project-meta">{{ project.status }} · {{ project.location }}</p>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.summary }}</p>
+            {% if project.themes and project.themes != empty %}
+              <ul class="tag-list" aria-label="Research themes">
+                {% for theme in project.themes %}<li>{{ theme }}</li>{% endfor %}
+              </ul>
+            {% endif %}
+            <div class="project-links">
+              {% if project.project_url %}<a href="{{ project.project_url }}">Project</a>{% endif %}
+              {% if project.publication_url %}<a href="{{ project.publication_url }}">Publication</a>{% endif %}
+              {% if project.code_url %}<a href="{{ project.code_url }}">Code</a>{% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="map-placeholder">
+        <div class="map-globe" aria-hidden="true">
+          <span class="latitude latitude-one"></span>
+          <span class="latitude latitude-two"></span>
+          <span class="longitude longitude-one"></span>
+          <span class="longitude longitude-two"></span>
+          <span class="map-point point-one"></span>
+          <span class="map-point point-two"></span>
+          <span class="map-point point-three"></span>
+        </div>
+        <div class="map-placeholder-copy">
+          <p class="eyebrow">Map in development</p>
+          <h3>A geographic view of the work is coming next.</h3>
+          <p>Project locations and connections will appear here as the research portfolio is assembled.</p>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% if site.data.presentations and site.data.presentations != empty %}
+<section id="presentations" class="section presentations-section" aria-labelledby="presentations-title">
+  <div class="page-shell">
+    <div class="section-heading reveal">
+      <p class="eyebrow">Presentations</p>
+      <h2 id="presentations-title">Talks, workshops, and posters</h2>
+    </div>
+    <div class="presentation-list">
+      {% for presentation in site.data.presentations %}
+        {% assign presentation_url = presentation.url | default: presentation.file %}
+        <a class="presentation-item reveal" href="{{ presentation_url | relative_url }}">
+          <span>{{ presentation.date }}</span>
+          <strong>{{ presentation.title }}</strong>
+          <span>{{ presentation.type }} · {{ presentation.event }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section outputs-section" aria-labelledby="outputs-title">
+  <div class="page-shell outputs-grid">
+    <div class="section-heading reveal">
+      <p class="eyebrow">Research outputs</p>
+      <h2 id="outputs-title">Follow the work</h2>
+    </div>
+    <div class="output-links reveal">
+      <a href="{{ site.links.scholar }}" target="_blank" rel="noopener noreferrer">
+        <span>Publications</span><small>Google Scholar</small><span aria-hidden="true">↗</span>
+      </a>
+      <a href="{{ site.links.github }}" target="_blank" rel="noopener noreferrer">
+        <span>Code</span><small>GitHub</small><span aria-hidden="true">↗</span>
+      </a>
+      <a href="{{ '/cv/' | relative_url }}">
+        <span>Curriculum vitae</span><small>Experience and training</small><span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
