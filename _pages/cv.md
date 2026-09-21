@@ -6,19 +6,9 @@ body_class: cv
 ---
 
 {% assign cv_file = site.static_files | where: "path", "/assets/docs/logan-hysen-cv.pdf" | first %}
-<section class="page-hero compact-hero">
-  <div class="page-shell narrow-shell reveal">
-    <p class="eyebrow">Curriculum vitae</p>
-    <h1>Experience, training, and scholarship</h1>
-    {% if cv_file %}
-      <p>Read the CV below, open it in a new tab, or download a copy.</p>
-    {% else %}
-      <p>A downloadable academic CV will be available here.</p>
-    {% endif %}
-  </div>
-</section>
 <section class="document-section">
   <div class="page-shell narrow-shell">
+    <h1 class="document-title">Curriculum vitae</h1>
     {% if cv_file %}
       <div class="document-actions reveal">
         <a class="button button-primary" href="{{ '/assets/docs/logan-hysen-cv.pdf' | relative_url }}" target="_blank" rel="noopener">Open PDF</a>

@@ -256,6 +256,47 @@ h3 {
   align-items: center;
   overflow: hidden;
   padding: clamp(4rem, 8vh, 7rem) 0 6.5rem;
+  background-color: var(--paper);
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-with-image {
+  background-image:
+    linear-gradient(90deg, rgba(10, 35, 30, 0.9) 0%, rgba(10, 35, 30, 0.72) 52%, rgba(10, 35, 30, 0.42) 100%),
+    var(--hero-image);
+}
+
+.hero-with-image .hero-copy h1,
+.hero-with-image .hero-intro,
+.hero-with-image .text-link,
+.hero-with-image .portrait-wrap figcaption,
+.hero-with-image .scroll-cue {
+  color: var(--paper-bright);
+}
+
+.hero-with-image .hero-copy .eyebrow {
+  color: var(--forest-100);
+}
+
+.hero-with-image .button-primary {
+  border-color: var(--paper-bright);
+  background: var(--paper-bright);
+  color: var(--forest-950);
+}
+
+.hero-with-image .button-primary:hover {
+  background: var(--white);
+  color: var(--forest-950);
+}
+
+.hero-with-image .portrait-wrap figcaption {
+  border-top-color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 0.6rem rgba(0, 0, 0, 0.55);
+}
+
+.hero-with-image .scroll-line {
+  background: var(--paper-bright);
 }
 
 .hero::before {
@@ -269,6 +310,10 @@ h3 {
   border-radius: 50%;
   box-shadow: 0 0 0 5rem rgba(23, 63, 53, 0.025), 0 0 0 10rem rgba(23, 63, 53, 0.018);
   content: "";
+}
+
+.hero-with-image::before {
+  display: none;
 }
 
 .hero-grid {
@@ -482,8 +527,7 @@ h3 {
 }
 
 .theme-card {
-  min-height: 22rem;
-  padding: clamp(2rem, 4vw, 3.5rem);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
   border-right: 1px solid var(--mist);
   border-bottom: 1px solid var(--mist);
   transition: background 200ms ease, transform 200ms ease;
@@ -496,7 +540,7 @@ h3 {
 
 .theme-index {
   display: block;
-  margin-bottom: clamp(3rem, 7vw, 6rem);
+  margin-bottom: 1.5rem;
   color: var(--gold);
   font-size: 0.75rem;
   font-weight: 700;
@@ -516,6 +560,37 @@ h3 {
 
 .map-section {
   background: #e7ebe5;
+}
+
+.research-projects-link {
+  margin-top: 2rem;
+}
+
+.research-projects-link p {
+  color: var(--slate);
+}
+
+.projects-section {
+  padding-top: 3rem;
+}
+
+.projects-section .map-heading {
+  margin-bottom: 2rem;
+}
+
+.projects-section h1 {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  margin-bottom: 1rem;
+}
+
+.page-cv .document-section {
+  padding-top: 2.5rem;
+}
+
+.document-title {
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
 }
 
 .map-heading {
@@ -1002,6 +1077,13 @@ h3 {
     padding-top: 3.5rem;
   }
 
+  .hero-with-image {
+    background-image:
+      linear-gradient(rgba(10, 35, 30, 0.78), rgba(10, 35, 30, 0.88)),
+      var(--hero-image);
+    background-position: center;
+  }
+
   .hero-grid,
   .intro-grid,
   .map-heading,
@@ -1025,7 +1107,6 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .theme-card { min-height: 18rem; }
 
   .map-placeholder {
     grid-template-columns: 1fr;

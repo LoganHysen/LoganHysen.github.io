@@ -29,7 +29,7 @@
         </button>
         <nav id="site-navigation" class="site-nav" aria-label="Primary navigation">
           <a href="{{ '/#research' | relative_url }}">Research</a>
-          <a href="{{ '/#map' | relative_url }}">Map</a>
+          <a href="{{ '/projects/' | relative_url }}"{% if page.url == '/projects/' %} aria-current="page"{% endif %}>Projects</a>
           <a href="{{ '/cv/' | relative_url }}">CV</a>
           {% if site.data.presentations and site.data.presentations != empty %}
             <a href="{{ '/#presentations' | relative_url }}">Presentations</a>

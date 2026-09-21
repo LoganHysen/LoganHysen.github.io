@@ -6,11 +6,14 @@ kept data-driven and dependency-light.
 
 ## Updating the site
 
-- Edit `index.html` for homepage prose and research themes.
+- Edit `index.html` for homepage prose and broad research interests.
+- Add the homepage landscape as `assets/img/hero-landscape.jpg`. The hero detects
+  the file automatically and applies the image with a readability overlay.
 - Add the current CV as `assets/docs/logan-hysen-cv.pdf`. The CV page detects it
   automatically and otherwise shows a contact fallback.
-- Add research projects to `_data/projects.yml`. The map and project list appear
-  automatically when the file contains at least one valid project.
+- Add research projects to `_data/projects.yml`. The map and project cards appear
+  on `/projects/`, linked from the homepage and navigation. Edit
+  `_pages/projects.html` for that page's layout and introduction.
 - Add talks, posters, or workshops to `_data/presentations.yml`. The homepage
   section and navigation link appear automatically when entries exist.
 - Edit `_pages/teaching.md` as the teaching portfolio develops. It is deliberately

@@ -2,11 +2,15 @@
 title: Logan Hysen
 description: Landscape ecology and conservation research by Logan Hysen, a PhD candidate at Michigan State University.
 body_class: home
-map: true
+hero_image: /assets/img/hero-landscape.jpg
 ---
 
-{% assign project_count = site.data.projects | size %}
-<section class="hero" aria-labelledby="hero-title">
+{% assign hero_image_file = site.static_files | where: "path", page.hero_image | first %}
+<section
+  class="hero{% if hero_image_file %} hero-with-image{% endif %}"
+  aria-labelledby="hero-title"
+  {% if hero_image_file %}style="--hero-image: url('{{ page.hero_image | relative_url }}')"{% endif %}
+>
   <div class="hero-grid page-shell">
     <div class="hero-copy reveal">
       <p class="eyebrow">Landscape ecologist · Conservation scientist</p>
@@ -58,94 +62,35 @@ map: true
 <section class="section themes-section" aria-labelledby="themes-title">
   <div class="page-shell">
     <div class="section-heading reveal">
-      <p class="eyebrow">Research themes</p>
-      <h2 id="themes-title">Questions that travel across boundaries</h2>
+      <p class="eyebrow">Research interests</p>
+      <h2 id="themes-title">The questions that guide my work</h2>
     </div>
     <div class="theme-grid">
       <article class="theme-card reveal">
         <span class="theme-index">01</span>
         <h3>Habitat and connectivity</h3>
-        <p>Understanding where species live, how they move, and how changing landscapes connect—or isolate—them.</p>
+        <p>I am interested in how species select habitat and how landscape change affects the connections between populations. My dissertation examines giant panda habitat under climate change and human activity.</p>
       </article>
       <article class="theme-card reveal">
         <span class="theme-index">02</span>
         <h3>Human–wildlife coexistence</h3>
-        <p>Examining the relationships between human decisions, livelihoods, development, and wildlife conservation.</p>
+        <p>I study how human activity shapes wildlife habitat, and how conservation can account for the people who share those landscapes.</p>
       </article>
       <article class="theme-card reveal">
         <span class="theme-index">03</span>
         <h3>Coupled systems</h3>
-        <p>Tracing ecological and socioeconomic connections across places, scales, and administrative borders.</p>
+        <p>I use a coupled human-natural systems perspective to understand how processes in one place can affect conservation elsewhere, across local and global scales.</p>
       </article>
       <article class="theme-card reveal">
         <span class="theme-index">04</span>
         <h3>Spatial conservation</h3>
-        <p>Using GIS, reproducible workflows, and quantitative models to support effective conservation decisions.</p>
+        <p>I use spatial analysis and quantitative models to connect ecological questions with conservation decisions. My northern spotted owl research examines where nesting habitat overlaps with wildfire risk.</p>
       </article>
     </div>
-  </div>
-</section>
-
-<section id="map" class="section map-section" aria-labelledby="map-title">
-  <div class="page-shell map-heading">
-    <div class="section-label reveal">
-      <p class="eyebrow">Research geography</p>
-      <span class="section-number" aria-hidden="true">02</span>
+    <div class="research-projects-link">
+      <p>See how these interests take shape in individual studies.</p>
+      <a class="button button-primary" href="{{ '/projects/' | relative_url }}">Explore research projects →</a>
     </div>
-    <div class="reveal">
-      <h2 id="map-title">Research connected across places</h2>
-      <p>As this portfolio grows, this map will connect each project to the landscapes, communities, and collaborations that shape it.</p>
-    </div>
-  </div>
-
-  <div class="page-shell map-content reveal">
-    {% if project_count > 0 %}
-      <div id="research-map" class="research-map" role="region" aria-label="Map of research project locations"></div>
-      <div class="project-list" aria-label="Research projects">
-        {% for project in site.data.projects %}
-          <article class="project-item">
-            {% if project.image %}
-              <figure class="project-image">
-                <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title | escape }}" loading="lazy">
-                {% if project.image_credit %}<figcaption>{{ project.image_credit }}</figcaption>{% endif %}
-              </figure>
-            {% endif %}
-            <div class="project-copy">
-              <p class="project-meta">{{ project.status }} · {{ project.location }}</p>
-              <h3>{{ project.title }}</h3>
-              {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
-              {% if project.themes and project.themes != empty %}
-                <ul class="tag-list" aria-label="Research themes">
-                  {% for theme in project.themes %}<li>{{ theme }}</li>{% endfor %}
-                </ul>
-              {% endif %}
-              <div class="project-links">
-                {% if project.project_url %}<a href="{{ project.project_url }}">Project</a>{% endif %}
-                {% if project.publication_url %}<a href="{{ project.publication_url }}">Publication</a>{% endif %}
-                {% if project.code_url %}<a href="{{ project.code_url }}">Code</a>{% endif %}
-              </div>
-            </div>
-          </article>
-        {% endfor %}
-      </div>
-    {% else %}
-      <div class="map-placeholder">
-        <div class="map-globe" aria-hidden="true">
-          <span class="latitude latitude-one"></span>
-          <span class="latitude latitude-two"></span>
-          <span class="longitude longitude-one"></span>
-          <span class="longitude longitude-two"></span>
-          <span class="map-point point-one"></span>
-          <span class="map-point point-two"></span>
-          <span class="map-point point-three"></span>
-        </div>
-        <div class="map-placeholder-copy">
-          <p class="eyebrow">Map in development</p>
-          <h3>A geographic view of the work is coming next.</h3>
-          <p>Project locations and connections will appear here as the research portfolio is assembled.</p>
-        </div>
-      </div>
-    {% endif %}
   </div>
 </section>
 
