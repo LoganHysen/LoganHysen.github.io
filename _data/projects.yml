@@ -1,7 +1,7 @@
 - title: Northern Spotted Owls
   location: Arcata, California
   coordinates: [40.8995, -124.0765]
-  status: Ongoing
+  status: Complete
   summary: We developed a multi-scale nesting-habitat model to identify northern spotted owl habitat along California's redwood coast that faces the greatest risk from high-severity wildfire.
   image: /assets/img/projects/northern-spotted-owl.png
   image_alt: A northern spotted owl perched on a mossy branch in a coastal redwood forest.
@@ -11,4 +11,22 @@
     - Connectivity
     - Wildfires
   publication_url: https://doi.org/10.1016/j.scitotenv.2023.163414
+  code_url:
+
+
+- title: Climate Change, Pandas, & People
+  location: China
+  coordinates: [30.5728, 104.0668]
+  status: Ongoing
+  summary: We are investigating the impacts of climate change and human activities on panda habitats using the metacoupling framework, uncovering synergies and tradeoffs between conservation and human wellbeing.
+  image: /assets/img/projects/DSC01145.JPG
+  image_alt: A panda looking directly at the camera with his tongue sticking out, reclining.
+  image_credit: Logan Hysen
+  themes:
+    - Landscape ecology
+    - Habitat
+    - Human-wildlife interactions
+    - Land use
+    - Metacoupling
+  publication_url:
   code_url:
