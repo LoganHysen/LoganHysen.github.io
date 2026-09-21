@@ -1,4 +1,5 @@
 <!doctype html>
+{% assign project_count = site.data.projects | size %}
 <html class="no-js" lang="{{ site.lang | default: 'en' }}">
   <head>
     <meta charset="utf-8">
@@ -8,7 +9,7 @@
     {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
     <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
-    {% if page.map and site.data.projects and site.data.projects != empty %}
+    {% if page.map and project_count > 0 %}
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="anonymous">
     {% endif %}
   </head>
@@ -60,7 +61,7 @@
       </div>
     </footer>
 
-    {% if page.map and site.data.projects and site.data.projects != empty %}
+    {% if page.map and project_count > 0 %}
       <script id="project-data" type="application/json">{{ site.data.projects | jsonify }}</script>
       <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="anonymous"></script>
     {% endif %}

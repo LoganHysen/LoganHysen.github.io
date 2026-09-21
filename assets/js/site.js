@@ -79,6 +79,14 @@
     bounds.push(coordinates);
 
     const popup = document.createElement("div");
+    popup.className = "map-popup";
+    if (project.image) {
+      const image = document.createElement("img");
+      image.className = "map-popup-image";
+      image.src = project.image;
+      image.alt = project.image_alt || project.title || "Research project";
+      popup.append(image);
+    }
     const title = document.createElement("strong");
     const location = document.createElement("div");
     title.textContent = project.title || "Research project";
@@ -91,4 +99,3 @@
   if (bounds.length === 1) map.setView(bounds[0], 5);
   else map.fitBounds(bounds, { padding: [40, 40], maxZoom: 6 });
 })();
-

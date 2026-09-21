@@ -41,5 +41,4 @@ defaults:
       path: ""
     values:
       layout: default
-      image: /assets/img/Hysen_Headshot.JPG
-
+      image: /assets/img/Hysen_Headshot.png

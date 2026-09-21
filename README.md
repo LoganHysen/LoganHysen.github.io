@@ -24,6 +24,9 @@ kept data-driven and dependency-light.
   coordinates: [42.7018, -84.4822]
   status: Ongoing
   summary: A short description of the research question and approach.
+  image: /assets/img/projects/example-project.jpg
+  image_alt: A concise description of the project image.
+  image_credit: Photographer or image-source credit.
   themes:
     - Landscape ecology
     - Connectivity
@@ -50,4 +53,3 @@ stored under `assets/presentations/`.
 
 Pull requests run the production build without publishing. Pushes to `master`
 build and deploy through the single workflow in `.github/workflows/deploy.yml`.
-

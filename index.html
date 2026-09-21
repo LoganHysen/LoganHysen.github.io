@@ -5,6 +5,7 @@ body_class: home
 map: true
 ---
 
+{% assign project_count = site.data.projects | size %}
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-grid page-shell">
     <div class="hero-copy reveal">
@@ -23,10 +24,10 @@ map: true
 
     <figure class="portrait-wrap reveal">
       <div class="portrait-frame">
-        <img src="{{ '/assets/img/Hysen_Headshot.png' | relative_url }}" alt="Logan Hysen" width="2471" height="2152" fetchpriority="high">
+        <img src="{{ '/assets/img/Hysen_Headshot.png' | relative_url }}" alt="Logan Hysen" width="1534" height="1525" fetchpriority="high">
       </div>
       <figcaption>
-        <span>PhD Candidate, Department of Fisheries and Wildlife, Michigan State University</span>
+        <span>PhD Candidate, Fisheries and Wildlife, Michigan State University</span>
       </figcaption>
     </figure>
   </div>
@@ -98,23 +99,31 @@ map: true
   </div>
 
   <div class="page-shell map-content reveal">
-    {% if site.data.projects and site.data.projects != empty %}
+    {% if project_count > 0 %}
       <div id="research-map" class="research-map" role="region" aria-label="Map of research project locations"></div>
       <div class="project-list" aria-label="Research projects">
         {% for project in site.data.projects %}
           <article class="project-item">
-            <p class="project-meta">{{ project.status }} · {{ project.location }}</p>
-            <h3>{{ project.title }}</h3>
-            <p>{{ project.summary }}</p>
-            {% if project.themes and project.themes != empty %}
-              <ul class="tag-list" aria-label="Research themes">
-                {% for theme in project.themes %}<li>{{ theme }}</li>{% endfor %}
-              </ul>
+            {% if project.image %}
+              <figure class="project-image">
+                <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title | escape }}" loading="lazy">
+                {% if project.image_credit %}<figcaption>{{ project.image_credit }}</figcaption>{% endif %}
+              </figure>
             {% endif %}
-            <div class="project-links">
-              {% if project.project_url %}<a href="{{ project.project_url }}">Project</a>{% endif %}
-              {% if project.publication_url %}<a href="{{ project.publication_url }}">Publication</a>{% endif %}
-              {% if project.code_url %}<a href="{{ project.code_url }}">Code</a>{% endif %}
+            <div class="project-copy">
+              <p class="project-meta">{{ project.status }} · {{ project.location }}</p>
+              <h3>{{ project.title }}</h3>
+              {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+              {% if project.themes and project.themes != empty %}
+                <ul class="tag-list" aria-label="Research themes">
+                  {% for theme in project.themes %}<li>{{ theme }}</li>{% endfor %}
+                </ul>
+              {% endif %}
+              <div class="project-links">
+                {% if project.project_url %}<a href="{{ project.project_url }}">Project</a>{% endif %}
+                {% if project.publication_url %}<a href="{{ project.publication_url }}">Publication</a>{% endif %}
+                {% if project.code_url %}<a href="{{ project.code_url }}">Code</a>{% endif %}
+              </div>
             </div>
           </article>
         {% endfor %}
