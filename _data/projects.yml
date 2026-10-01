@@ -3,9 +3,9 @@
   coordinates: [40.8995, -124.0765]
   status: Complete
   summary: We developed a multi-scale nesting-habitat model to identify northern spotted owl habitat along California's redwood coast that faces the greatest risk from high-severity wildfire.
-  image: /assets/img/projects/northern-spotted-owl.png
-  image_alt: A northern spotted owl perched on a mossy branch in a coastal redwood forest.
-  image_credit: Illustrative image generated for this site.
+  image: /assets/img/projects/NSO.jpg
+  image_alt: A northern spotted owl.
+  image_credit: The BirdersReport.com
   themes:
     - Landscape ecology
     - Connectivity
