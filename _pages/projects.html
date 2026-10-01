@@ -39,7 +39,13 @@ map: true
               {% endif %}
               <div class="project-links">
                 {% if project.project_url %}<a href="{{ project.project_url }}">Project</a>{% endif %}
-                {% if project.publication_url %}<a href="{{ project.publication_url }}">Publication</a>{% endif %}
+                {% if project.publication_urls %}
+                  {% for publication_url in project.publication_urls %}
+                    <a href="{{ publication_url }}">Publication{% if project.publication_urls.size > 1 %} {{ forloop.index }}{% endif %}</a>
+                  {% endfor %}
+                {% elsif project.publication_url %}
+                  <a href="{{ project.publication_url }}">Publication</a>
+                {% endif %}
                 {% if project.code_url %}<a href="{{ project.code_url }}">Code</a>{% endif %}
               </div>
             </div>
@@ -66,5 +72,4 @@ map: true
     {% endif %}
   </div>
 </section>
-
 

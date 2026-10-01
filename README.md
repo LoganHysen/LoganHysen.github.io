@@ -35,8 +35,14 @@ kept data-driven and dependency-light.
     - Connectivity
   project_url: https://example.com
   publication_url:
+  publication_urls:
+    - https://doi.org/example-one
+    - https://doi.org/example-two
   code_url:
 ```
+
+Use `publication_url` for one publication or `publication_urls` for multiple
+publication links.
 
 ## Presentation data example
 
