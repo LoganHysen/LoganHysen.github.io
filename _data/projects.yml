@@ -30,3 +30,36 @@
     - Metacoupling
   publication_url:
   code_url:
+
+  - title: Human-Wildlife Coexistence in Iran
+  location: Iran
+  coordinates: [36.2605, 59.6168]
+  status: Ongoing
+  summary: Multiple Projects. We are investigating human-wildlife coexistence, focusing on species that often interact with humans, such as brown bears and bee-eaters. We are linking spatial modeling with human dimensions to understand the drivers of human-wildlife interactions and identify strategies for coexistence.
+  image: /assets/img/projects/bear.jpg
+  image_alt: A brown bear looking at the camera.
+  image_credit: Vincent Balsamo/Getty-file photo
+  themes:
+    - Landscape ecology
+    - Spatial modeling
+    - Human-wildlife interactions
+    - Human dimensions
+  publication_url: https://doi.org/10.1016/j.gecco.2022.e02241, https://doi.org/10.1111/csp2.70219
+  code_url:
+
+  - title: Corridor Design in the Pacific Northwest
+  location: Washington
+  coordinates: [47.6062, -122.3320]
+  status: Ongoing
+  summary: We are developing a multi-species corridor design framework to identify and prioritize areas for conservation in the Pacific Northwest partnered with local NGOs, using the metacoupling framework to evaluate corridor designs under future economic and climate scenarios.
+  image: 
+  image_alt: 
+  image_credit: 
+  themes:
+    - Landscape ecology
+    - Spatial modeling
+    - Connectivity
+    - Metacoupling
+    - Decision support
+  publication_url: 
+  code_url:
