@@ -14,6 +14,8 @@ hero_image: /assets/img/hero-landscape.jpg
   <div class="hero-grid page-shell">
     <div class="hero-copy reveal">
       <p class="eyebrow">Landscape ecologist · Conservation scientist</p>
+      <h1 id="hero-title">Logan Hysen</h1>
+      <p class="hero-role">PhD Candidate, Fisheries and Wildlife, Michigan State University</p>
       <p class="hero-intro">
         I am a PhD candidate in the Center for Systems Integration and Sustainability at Michigan State University studying how climate change
         and human activity shape wildlife habitat. I'm particularly interested in how humans and wildlife can coexist in shared landscapes, and 
@@ -30,9 +32,6 @@ hero_image: /assets/img/hero-landscape.jpg
       <div class="portrait-frame">
         <img src="{{ '/assets/img/Hysen_Headshot.png' | relative_url }}" alt="Logan Hysen" width="1534" height="1525" fetchpriority="high">
       </div>
-      <figcaption>
-        <span>PhD Candidate, Fisheries and Wildlife, Michigan State University</span>
-      </figcaption>
     </figure>
   </div>
   <a class="scroll-cue" href="#research" aria-label="Continue to research">
@@ -41,32 +40,26 @@ hero_image: /assets/img/hero-landscape.jpg
   </a>
 </section>
 
-<section class="section themes-section" aria-labelledby="themes-title">
+<section id="research" class="section themes-section" aria-labelledby="themes-title">
   <div class="page-shell">
-    <div class="section-heading reveal">
+    <div class="section-heading questions-heading reveal">
       <h2 id="themes-title">Some questions that guide my work</h2>
     </div>
     <div class="theme-grid">
-      <article class="theme-card reveal">
-        <span class="theme-index">01</span>
-        <h3>Habitat and connectivity</h3>
-        <p>How do species select habitat and how does landscape change affect the connections between populations?</p>
-      </article>
-      <article class="theme-card reveal">
-        <span class="theme-index">02</span>
-        <h3>Human–wildlife coexistence</h3>
-        <p>How does human activity shape wildlife habitat, and how can conservation account for the people who share the same landscapes as wildlife?</p>
-      </article>
-      <article class="theme-card reveal">
-        <span class="theme-index">03</span>
-        <h3>Coupled systems</h3>
-        <p>How do processes, ecological or social, interact across local and global scales? How do systems influence each other across these scales?</p>
-      </article>
-      <article class="theme-card reveal">
-        <span class="theme-index">04</span>
-        <h3>Spatial conservation</h3>
-        <p>How can we design and implement conservation strategies that effectively manage and protect biodiversity across spatial scales?</p>
-      </article>
+      {% for interest in site.data.research_interests %}
+        <article class="theme-card{% if interest.image %} theme-card-with-image{% endif %} reveal">
+          {% if interest.image %}
+            <div class="theme-image">
+              <img src="{{ interest.image | relative_url }}" alt="{{ interest.image_alt | escape }}" loading="lazy" width="1800" height="1200">
+            </div>
+          {% endif %}
+          <div class="theme-copy">
+            <span class="theme-index">{{ forloop.index | prepend: '0' }}</span>
+            <h3>{{ interest.title }}</h3>
+            <p>{{ interest.question }}</p>
+          </div>
+        </article>
+      {% endfor %}
     </div>
     <div class="research-projects-link">
       <a class="button button-primary" href="{{ '/projects/' | relative_url }}">Explore research projects →</a>

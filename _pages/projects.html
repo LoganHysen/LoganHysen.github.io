@@ -6,7 +6,9 @@ body_class: projects
 map: true
 ---
 
-{% assign project_count = site.data.projects | size %}
+{% assign mapped_projects = site.data.projects | where: "show_on_map", true %}
+{% assign unmapped_projects = site.data.projects | where: "show_on_map", false %}
+{% assign mapped_project_count = mapped_projects | size %}
 <section id="map" class="section map-section projects-section" aria-labelledby="map-title">
   <div class="page-shell map-heading">
     <div class="reveal">
@@ -17,39 +19,11 @@ map: true
   </div>
 
   <div class="page-shell map-content reveal">
-    {% if project_count > 0 %}
+    {% if mapped_project_count > 0 %}
       <div id="research-map" class="research-map" role="region" aria-label="Map of research project locations"></div>
       <div class="project-list" aria-label="Research projects">
-        {% for project in site.data.projects %}
-          <article class="project-item">
-            {% if project.image %}
-              <figure class="project-image">
-                <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title | escape }}" loading="lazy">
-                {% if project.image_credit %}<figcaption>{{ project.image_credit }}</figcaption>{% endif %}
-              </figure>
-            {% endif %}
-            <div class="project-copy">
-              <p class="project-meta">{{ project.status }} · {{ project.location }}</p>
-              <h3>{{ project.title }}</h3>
-              {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
-              {% if project.themes and project.themes != empty %}
-                <ul class="tag-list" aria-label="Research themes">
-                  {% for theme in project.themes %}<li>{{ theme }}</li>{% endfor %}
-                </ul>
-              {% endif %}
-              <div class="project-links">
-                {% if project.project_url %}<a href="{{ project.project_url }}">Project</a>{% endif %}
-                {% if project.publication_urls %}
-                  {% for publication_url in project.publication_urls %}
-                    <a href="{{ publication_url }}">Publication{% if project.publication_urls.size > 1 %} {{ forloop.index }}{% endif %}</a>
-                  {% endfor %}
-                {% elsif project.publication_url %}
-                  <a href="{{ project.publication_url }}">Publication</a>
-                {% endif %}
-                {% if project.code_url %}<a href="{{ project.code_url }}">Code</a>{% endif %}
-              </div>
-            </div>
-          </article>
+        {% for project in mapped_projects %}
+          {% include project-card.html project=project %}
         {% endfor %}
       </div>
     {% else %}
@@ -71,5 +45,18 @@ map: true
       </div>
     {% endif %}
   </div>
-</section>
 
+  {% if unmapped_projects and unmapped_projects != empty %}
+    <div class="page-shell beyond-map reveal" aria-labelledby="beyond-map-title">
+      <div class="beyond-map-heading">
+        <p class="eyebrow">Research without a single location</p>
+        <h2 id="beyond-map-title">Projects beyond the map</h2>
+      </div>
+      <div class="project-list" aria-label="Projects without a geographic location">
+        {% for project in unmapped_projects %}
+          {% include project-card.html project=project %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</section>

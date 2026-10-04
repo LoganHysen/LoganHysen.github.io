@@ -1,4 +1,5 @@
 - title: Northern Spotted Owls
+  show_on_map: true
   location: Arcata, California
   coordinates: [40.8995, -124.0765]
   status: Complete
@@ -14,6 +15,7 @@
   code_url:
 
 - title: Climate Change, Pandas, & People
+  show_on_map: true
   location: China
   coordinates: [30.5728, 104.0668]
   status: Ongoing
@@ -31,6 +33,7 @@
   code_url:
 
 - title: Human-Wildlife Coexistence in Iran
+  show_on_map: true
   location: Iran
   coordinates: [36.2605, 59.6168]
   status: Ongoing
@@ -49,6 +52,7 @@
   code_url:
 
 - title: Corridor Design in the Pacific Northwest
+  show_on_map: true
   location: Washington
   coordinates: [47.6062, -122.3320]
   status: Ongoing
